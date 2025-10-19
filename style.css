@@ -1,0 +1,343 @@
+/* Variables de Color (Ejemplo - ajusta a tu marca) */
+:root {
+  --primary-color: #007bff; /* Azul de acento (Puede ser el color de tu marca) */
+  --secondary-color: #28a745; /* Verde para éxito/CTA */
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --dark-bg: #e9ecef;
+}
+
+/* Estilos Generales y Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Header y Navegación (Común a ambas páginas) */
+header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Botones CTA (Llamadas a la Acción - Común) */
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.secondary:hover {
+  background-color: #1e7e34;
+  transform: translateY(-2px);
+}
+
+/* --- Estilos Específicos para index.html --- */
+
+/* Sección Hero */
+.hero {
+  background: var(--dark-bg);
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  /* Título H1 optimizado */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* Resumen de Productos (Card Grid) */
+.products-summary {
+  padding: 60px 0;
+  text-align: center;
+  background-color: white;
+}
+
+.products-summary h2 {
+  /* Título de sección H2 */
+  margin-bottom: 30px;
+}
+
+.card-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--light-bg);
+  padding: 20px;
+  border-radius: 8px;
+  width: 30%; /* 3 tarjetas por fila en escritorio */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  /* Títulos de producto H3 */
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* Sección de Contacto (Formulario) */
+.contact-form {
+  background: var(--dark-bg);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact-form form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Footer (Común) */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Botón Flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
+  transform: scale(1.1);
+}
+
+/* ----------------------------------------------------------------- */
+/* --- ESTILOS PARA productos.html (Página de Transición / Enlace) --- */
+/* ----------------------------------------------------------------- */
+
+.transition-container {
+  text-align: center;
+  padding: 80px 20px;
+  min-height: 70vh;
+  background-color: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+.value-block {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: left;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.value-block ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.value-block li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.value-block li:last-child {
+  border-bottom: none;
+}
+
+.value-block li i {
+  color: var(--secondary-color);
+  margin-right: 10px;
+}
+
+.large-cta {
+  font-size: 1.2rem;
+  padding: 18px 45px;
+}
+
+.disclaimer-text {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* ----------------------------------------------------------------- */
+/* --- MEDIA QUERIES (RESPONSIVIDAD MÓVIL) --- */
+/* ----------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Header */
+  header .container {
+    flex-direction: column;
+    padding-bottom: 5px;
+  }
+  nav {
+    margin-top: 10px;
+  }
+  nav a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 60px 15px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Cards de Productos */
+  .card-grid {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%; /* Una tarjeta por fila en móvil */
+    margin-bottom: 15px;
+  }
+
+  /* Contacto */
+  .contact-form form {
+    margin: 20px 15px;
+  }
+
+  /* WhatsApp Flotante */
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 25px;
+  }
+
+  /* Página de Transición */
+  .transition-container {
+    padding: 40px 15px;
+  }
+  .main-title {
+    font-size: 1.6rem;
+  }
+  .value-block {
+    padding: 20px;
+  }
+  .value-block li {
+    font-size: 1rem;
+  }
+}
