@@ -1,10 +1,10 @@
-/* Variables de Color (Ejemplo - ajusta a tu marca) */
+/* Variables de Color: Violeta (Ajustado) y Dorado */
 :root {
-  --primary-color: #007bff; /* Azul de acento (Puede ser el color de tu marca) */
-  --secondary-color: #28a745; /* Verde para éxito/CTA */
+  --primary-color: #4b0082; /* Violeta Berenjena Profundo (Acento principal, más sutil) */
+  --secondary-color: #ffc300; /* Dorado Limpio (Acento secundario/Éxito) */
   --text-color: #333;
-  --light-bg: #f8f9fa;
-  --dark-bg: #e9ecef;
+  --light-bg: #fafaff; /* Fondo muy claro con toque violeta */
+  --dark-bg: #f0e6ff; /* Fondo ligero de contraste */
 }
 
 /* Estilos Generales y Reset */
@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: white;
@@ -31,7 +31,7 @@ body {
 /* Header y Navegación (Común a ambas páginas) */
 header {
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -43,21 +43,65 @@ header .container {
   align-items: center;
 }
 
+/* Estilos para el Título H1 */
 header h1 {
   font-size: 1.5rem;
   color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+/* Estilo específico para el SVG incrustado en el H1 */
+.header-icon {
+  height: 30px; /* Tamaño del icono */
+  width: 30px;
+  margin-right: 8px; /* Espacio a la derecha del texto */
+  flex-shrink: 0; /* Evita que el SVG se encoja en pantallas pequeñas */
+}
+
+/* CONTENEDOR CLAVE: Alinea la navegación y el selector de idioma a la derecha */
+.nav-group {
+  display: flex;
+  align-items: center;
+  /* Espacio entre el menú de navegación y el selector */
+  gap: 25px;
+}
+
+/* Estilos para el selector de idioma */
+.language-selector {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  padding-left: 15px; /* Añade espacio */
+  border-left: 1px solid #ddd; /* Separador sutil */
+}
+
+.language-selector label {
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+.language-selector select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-family: inherit;
+  background-color: var(--light-bg);
 }
 
 nav a {
   color: var(--text-color);
   text-decoration: none;
   margin-left: 20px;
-  font-weight: bold;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 /* Botones CTA (Llamadas a la Acción - Común) */
@@ -65,13 +109,15 @@ nav a:hover {
   display: inline-block;
   padding: 12px 30px;
   margin-top: 15px;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
   border: none;
   cursor: pointer;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .primary {
@@ -80,18 +126,20 @@ nav a:hover {
 }
 
 .primary:hover {
-  background-color: #0056b3;
+  background-color: #38006b; /* Violeta más oscuro para hover */
   transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(75, 0, 130, 0.3);
 }
 
 .secondary {
   background-color: var(--secondary-color);
-  color: white;
+  color: var(--text-color);
 }
 
 .secondary:hover {
-  background-color: #1e7e34;
+  background-color: #e0ac00; /* Dorado más oscuro */
   transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(255, 195, 0, 0.4);
 }
 
 /* --- Estilos Específicos para index.html --- */
@@ -111,7 +159,7 @@ nav a:hover {
   /* Título H1 optimizado */
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 /* Resumen de Productos (Card Grid) */
@@ -124,6 +172,7 @@ nav a:hover {
 .products-summary h2 {
   /* Título de sección H2 */
   margin-bottom: 30px;
+  color: var(--primary-color);
 }
 
 .card-grid {
@@ -136,10 +185,17 @@ nav a:hover {
 
 .card {
   background: var(--light-bg);
-  padding: 20px;
-  border-radius: 8px;
+  padding: 25px;
+  border-radius: 12px;
   width: 30%; /* 3 tarjetas por fila en escritorio */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid var(--secondary-color);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
@@ -148,43 +204,11 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-/* Sección de Contacto (Formulario) */
-.contact-form {
-  background: var(--dark-bg);
-  padding: 60px 0;
-  text-align: center;
-}
-
-.contact-form form {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 30px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
 /* Footer (Común) */
 footer {
   text-align: center;
   padding: 20px 0;
-  background-color: #333;
+  background-color: var(--primary-color);
   color: white;
   font-size: 0.9rem;
 }
@@ -196,12 +220,12 @@ footer {
   height: 60px;
   bottom: 40px;
   right: 40px;
-  background-color: #25d366;
+  background-color: #25d366; /* Verde de WhatsApp */
   color: #fff;
   border-radius: 50px;
   text-align: center;
   font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   z-index: 1001;
   display: flex;
   align-items: center;
@@ -223,7 +247,7 @@ footer {
   text-align: center;
   padding: 80px 20px;
   min-height: 70vh;
-  background-color: var(--light-bg);
+  background-color: var(--dark-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -244,6 +268,7 @@ footer {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid var(--secondary-color);
 }
 
 .value-block ul {
@@ -264,7 +289,7 @@ footer {
 }
 
 .value-block li i {
-  color: var(--secondary-color);
+  color: var(--secondary-color); /* Iconos dorados */
   margin-right: 10px;
 }
 
@@ -288,12 +313,37 @@ footer {
     flex-direction: column;
     padding-bottom: 5px;
   }
-  nav {
+
+  /* El grupo de navegación se apila en móvil */
+  .nav-group {
+    flex-direction: column;
+    gap: 10px; /* Espacio reducido en móvil */
+    width: 100%;
     margin-top: 10px;
   }
+
+  nav {
+    /* Aseguramos que los links de navegación se centren */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   nav a {
     margin: 0 8px;
     font-size: 0.9rem;
+  }
+
+  .language-selector {
+    /* Removemos el separador y centramos el selector */
+    border-left: none;
+    padding-left: 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  header h1 {
+    justify-content: center; /* Centrar el H1 con el icono en móvil */
   }
 
   /* Hero */
@@ -311,11 +361,6 @@ footer {
   .card {
     width: 100%; /* Una tarjeta por fila en móvil */
     margin-bottom: 15px;
-  }
-
-  /* Contacto */
-  .contact-form form {
-    margin: 20px 15px;
   }
 
   /* WhatsApp Flotante */

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Asesoría 4Life | Tu Guía Experta en Bienestar y Nutrición</title>
-
+    <title data-translate-key="pageTitle">
+      4Life Beratung | Ihr Experten-Leitfaden für Wohlbefinden und Ernährung
+    </title>
     <meta
       name="description"
-      content="Recibe asesoría personalizada y experta para elegir los productos 4Life perfectos para tu salud y objetivos. Orientación profesional gratuita."
+      content="Erhalten Sie Expertenberatung zur Auswahl der perfekten 4Life Produkte für Ihre Gesundheit und Ziele. Schnelle, kostenlose Orientierung per WhatsApp."
+      data-translate-key="metaDescription"
     />
 
     <link rel="stylesheet" href="style.css" />
@@ -19,108 +21,328 @@
   </head>
   <body>
     <a
-      href="https://wa.me/TUNUMERO?text=Hola,%20solicito%20asesoría%20sobre%20productos%204Life."
+      href="https://wa.me/TUNUMERO"
       target="_blank"
       class="whatsapp-float"
+      id="whatsappLink"
     >
       <i class="fab fa-whatsapp"></i>
     </a>
 
     <header>
       <div class="container">
-        <h1>[Tu Nombre/Marca] Asesoría 4Life</h1>
-        <nav>
-          <a href="#inicio">Inicio</a>
-          <a href="productos.html">Productos</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
+        <h1 data-translate-key="siteTitle">
+          <svg
+            width="100"
+            height="100"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            class="header-icon"
+          >
+            <defs>
+              <style>
+                .violeta {
+                  fill: #3a2a4e;
+                }
+                .dorado {
+                  fill: #c7a252;
+                }
+                .dorado-stroke {
+                  stroke: #c7a252;
+                }
+              </style>
+            </defs>
+            <circle cx="50" cy="50" r="50" class="violeta" />
+            <g transform="translate(50, 50)">
+              <path
+                d="M -30 0 C -20 -30, 20 -30, 30 0 C 20 30, -20 30, -30 0"
+                class="dorado-stroke"
+                stroke-width="7"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="0" cy="0" r="12" class="dorado" />
+              <circle cx="0" cy="0" r="6" class="violeta" />
+            </g>
+          </svg>
+          [Ihr Name/Marke] 4Life Beratung
+        </h1>
+
+        <div class="nav-group">
+          <nav>
+            <a href="#inicio" data-translate-key="navHome">Start</a>
+            <a href="productos.html" data-translate-key="navProducts"
+              >Produkte</a
+            >
+          </nav>
+
+          <div class="language-selector">
+            <label for="language-select" data-translate-key="langLabel"
+              >Sprache:</label
+            >
+            <select id="language-select" onchange="setLanguage(this.value)">
+              <option value="de">Deutsch</option>
+              <option value="es">Español</option>
+              <option value="en">English</option>
+              <option value="pt">Português</option>
+            </select>
+          </div>
+        </div>
       </div>
     </header>
 
     <section id="inicio" class="hero">
       <div class="container">
-        <h1 class="hero-title">
-          Optimiza tu Bienestar con Asesoría Experta en Productos 4Life
+        <h1 class="hero-title" data-translate-key="heroH1">
+          Optimieren Sie Ihr Wohlbefinden mit Expertenberatung zu
+          4Life-Produkten
         </h1>
-        <p>
-          Descubre los productos que mejor se adaptan a tus objetivos de salud
-          con orientación personalizada.
+        <p data-translate-key="heroP">
+          Entdecken Sie die Produkte, die am besten zu Ihren Gesundheitszielen
+          passen, mit persönlicher Betreuung. **Ihr Kauf beinhaltet kostenlose
+          Nachbetreuung.**
         </p>
-        <a href="#contacto" class="cta-button primary"
-          >Recibe Asesoría Personalizada</a
+
+        <a
+          href="productos.html"
+          class="cta-button primary"
+          data-translate-key="heroCta"
+          >Produkte ansehen und Beratung erhalten</a
         >
       </div>
     </section>
 
     <section class="products-summary">
       <div class="container">
-        <h2>Nuestros Productos Más Populares</h2>
+        <h2 data-translate-key="summaryH2">
+          Entdecken Sie die Grundlage des Wohlbefindens: Ausgewählte Produkte
+        </h2>
         <div class="card-grid">
           <div class="card">
-            <h3>Transfer Factor Tri-Factor® Formula</h3>
-            <p>Fuerza y equilibrio para el sistema inmune.</p>
+            <h3 data-translate-key="card1Title">
+              Transfer Factor Tri-Factor® Formula
+            </h3>
+            <p data-translate-key="card1P">
+              Stärke und Gleichgewicht für das Immunsystem. Der Grundstein von
+              4Life.
+            </p>
           </div>
           <div class="card">
-            <h3>Pro-TF™</h3>
-            <p>Proteína avanzada para el control de peso y músculo.</p>
+            <h3 data-translate-key="card2Title">Pro-TF™</h3>
+            <p data-translate-key="card2P">
+              Fortschrittliches Protein für Gewichtsmanagement und schlanken
+              Muskelaufbau.
+            </p>
           </div>
           <div class="card">
-            <h3>Renuvo®</h3>
-            <p>Soporte para la recuperación, energía y vitalidad.</p>
+            <h3 data-translate-key="card3Title">Renuvo®</h3>
+            <p data-translate-key="card3P">
+              Unterstützung für Erholung, Energie und allgemeine Zellvitalität.
+            </p>
           </div>
         </div>
-        <a href="productos.html" class="cta-button secondary"
-          >Explorar Catálogo con Asesoría</a
+        <a
+          href="productos.html"
+          class="cta-button secondary"
+          data-translate-key="summaryCta"
+          >Gesamten 4Life Katalog erkunden</a
         >
-      </div>
-    </section>
-
-    <section id="contacto" class="contact-form">
-      <div class="container">
-        <h2>¿Listo para empezar? Contáctame para tu Asesoría Gratuita</h2>
-        <p>
-          Llena este formulario y me comunicaré contigo lo antes posible para
-          empezar tu asesoría.
-        </p>
-
-        <form action="https://formspree.io/f/TU_ENDPOINT_AQUÍ" method="POST">
-          <input
-            type="text"
-            name="Nombre"
-            placeholder="Tu Nombre Completo"
-            required
-          />
-          <input
-            type="email"
-            name="Correo"
-            placeholder="Tu Correo Electrónico"
-            required
-          />
-          <input
-            type="tel"
-            name="Telefono"
-            placeholder="Tu Teléfono (incluye código de país)"
-            required
-          />
-          <textarea
-            name="Mensaje"
-            placeholder="Cuéntame sobre tus objetivos (Opcional)"
-          ></textarea>
-
-          <button type="submit" class="cta-button primary">
-            Solicitar Asesoría Gratuita
-          </button>
-        </form>
       </div>
     </section>
 
     <footer>
       <div class="container">
-        <p>
-          &copy; 2024 [Tu Nombre/Marca]. Asesoría independiente de productos
-          4Life. | Asesor certificado con años de experiencia.
+        <p data-translate-key="footerText">
+          &copy; 2024 [Ihr Name/Marke]. Unabhängige Beratung zu 4Life-Produkten.
+          Kontaktieren Sie uns per WhatsApp für kostenlose Beratung.
         </p>
       </div>
     </footer>
+
+    <script>
+      // 1. OBJETO DE TRADUCCIONES PARA DE, ES, EN, PT
+      const translations = {
+        de: {
+          pageTitle:
+            "4Life Beratung | Ihr Experten-Leitfaden für Wohlbefinden und Ernährung",
+          metaDescription:
+            "Erhalten Sie Expertenberatung zur Auswahl der perfekten 4Life Produkte für Ihre Gesundheit und Ziele. Schnelle, kostenlose Orientierung per WhatsApp.",
+          siteTitle: "[Ihr Name/Marke] 4Life Beratung",
+          navHome: "Start",
+          navProducts: "Produkte",
+          langLabel: "Sprache:",
+          heroH1:
+            "Optimieren Sie Ihr Wohlbefinden mit Expertenberatung zu 4Life-Produkten",
+          heroP:
+            "Entdecken Sie die Produkte, die am besten zu Ihren Gesundheitszielen passen, mit persönlicher Betreuung. **Ihr Kauf beinhaltet kostenlose Nachbetreuung.**",
+          heroCta: "Produkte ansehen und Beratung erhalten",
+          summaryH2:
+            "Entdecken Sie die Grundlage des Wohlbefindens: Ausgewählte Produkte",
+          card1Title: "Transfer Factor Tri-Factor® Formula",
+          card1P:
+            "Stärke und Gleichgewicht für das Immunsystem. Der Grundstein von 4Life.",
+          card2Title: "Pro-TF™",
+          card2P:
+            "Fortschrittliches Protein für Gewichtsmanagement und schlanken Muskelaufbau.",
+          card3Title: "Renuvo®",
+          card3P:
+            "Unterstützung für Erholung, Energie und allgemeine Zellvitalität.",
+          summaryCta: "Gesamten 4Life Katalog erkunden",
+          footerText:
+            "&copy; 2024 [Ihr Name/Marke]. Unabhängige Beratung zu 4Life-Produkten. Kontaktieren Sie uns per WhatsApp für kostenlose Beratung.",
+          whatsappMsg: "Hallo, ich bitte um Beratung zu 4Life-Produkten.",
+        },
+        es: {
+          pageTitle:
+            "Asesoría 4Life | Tu Guía Experta en Bienestar y Nutrición",
+          metaDescription:
+            "Recibe asesoría personalizada y experta para elegir los productos 4Life perfectos para tu salud y objetivos. Orientación profesional rápida por WhatsApp.",
+          siteTitle: "[Tu Nombre/Marca] Asesoría 4Life",
+          navHome: "Inicio",
+          navProducts: "Productos",
+          langLabel: "Idioma:",
+          heroH1:
+            "Optimiza tu Bienestar con Asesoría Experta en Productos 4Life",
+          heroP:
+            "Descubre los productos que mejor se adaptan a tus objetivos de salud con orientación personalizada. **Tu compra incluye seguimiento gratuito.**",
+          heroCta: "Ver Productos y Recibir Asesoría",
+          summaryH2: "Explora la Base del Bienestar: Productos Destacados",
+          card1Title: "Transfer Factor Tri-Factor® Formula",
+          card1P:
+            "Fuerza y equilibrio para el sistema inmune. La piedra angular de 4Life.",
+          card2Title: "Pro-TF™",
+          card2P:
+            "Proteína avanzada para el control de peso y desarrollo muscular magro.",
+          card3Title: "Renuvo®",
+          card3P:
+            "Soporte para la recuperación, energía y vitalidad celular general.",
+          summaryCta: "Explorar Todo el Catálogo 4Life",
+          footerText:
+            "&copy; 2024 [Tu Nombre/Marca]. Asesoría independiente de productos 4Life. Consulta por WhatsApp para orientación gratuita.",
+          whatsappMsg: "Hola, solicito asesoría sobre productos 4Life.",
+        },
+        en: {
+          pageTitle:
+            "4Life Consulting | Your Expert Guide to Wellness and Nutrition",
+          metaDescription:
+            "Get personalized, expert advice to choose the perfect 4Life products for your health and goals. Quick professional guidance via WhatsApp.",
+          siteTitle: "[Your Name/Brand] 4Life Consulting",
+          navHome: "Home",
+          navProducts: "Products",
+          langLabel: "Language:",
+          heroH1: "Optimize Your Wellness with Expert 4Life Product Consulting",
+          heroP:
+            "Discover the products that best suit your health goals with personalized guidance. **Your purchase includes free follow-up.**",
+          heroCta: "View Products and Get Consulting",
+          summaryH2: "Explore the Foundation of Wellness: Featured Products",
+          card1Title: "Transfer Factor Tri-Factor® Formula",
+          card1P:
+            "Strength and balance for the immune system. The cornerstone of 4Life.",
+          card2Title: "Pro-TF™",
+          card2P:
+            "Advanced protein for weight management and lean muscle development.",
+          card3Title: "Renuvo®",
+          card3P:
+            "Support for recovery, energy, and overall cellular vitality.",
+          summaryCta: "Explore the Complete 4Life Catalog",
+          footerText:
+            "&copy; 2024 [Your Name/Brand]. Independent 4Life product consulting. Contact via WhatsApp for free guidance.",
+          whatsappMsg: "Hello, I request consulting regarding 4Life products.",
+        },
+        pt: {
+          pageTitle:
+            "Consultoria 4Life | Seu Guia Especialista em Bem-Estar e Nutrição",
+          metaDescription:
+            "Receba consultoria personalizada e especializada para escolher os produtos 4Life perfeitos para sua saúde e objetivos. Orientação profissional rápida via WhatsApp.",
+          siteTitle: "[Seu Nome/Marca] Consultoria 4Life",
+          navHome: "Início",
+          navProducts: "Produtos",
+          langLabel: "Idioma:",
+          heroH1:
+            "Otimize Seu Bem-Estar com Consultoria Especializada em Produtos 4Life",
+          heroP:
+            "Descubra os produtos que melhor se adaptam aos seus objetivos de saúde com orientação personalizada. **Sua compra inclui acompanhamento gratuito.**",
+          heroCta: "Ver Produtos e Obter Consultoria",
+          summaryH2: "Explore a Base do Bem-Estar: Produtos em Destaque",
+          card1Title: "Transfer Factor Tri-Factor® Formula",
+          card1P:
+            "Força e equilíbrio para o sistema imunológico. A pedra angular da 4Life.",
+          card2Title: "Pro-TF™",
+          card2P:
+            "Proteína avançada para controle de peso e desenvolvimento muscular magro.",
+          card3Title: "Renuvo®",
+          card3P:
+            "Suporte para recuperação, energia e vitalidade celular geral.",
+          summaryCta: "Explorar o Catálogo Completo 4Life",
+          footerText:
+            "&copy; 2024 [Seu Nome/Marca]. Consultoria independente de produtos 4Life. Consulte via WhatsApp para orientação gratuita.",
+          whatsappMsg: "Olá, solicito consultoria sobre produtos 4Life.",
+        },
+      };
+
+      // Número de WhatsApp (debe incluir código de país, sin '+' ni espacios)
+      const WHATSAPP_NUMBER = "TUNUMERO";
+
+      // 2. FUNCIÓN PARA APLICAR EL IDIOMA
+      function setLanguage(lang) {
+        const dictionary = translations[lang];
+
+        // 2.1. Traducir elementos con data-translate-key
+        document.querySelectorAll("[data-translate-key]").forEach((element) => {
+          const key = element.getAttribute("data-translate-key");
+          if (dictionary[key]) {
+            // Título de la página
+            if (element.tagName === "TITLE") {
+              element.textContent = dictionary[key];
+              // Meta descripción
+            } else if (
+              element.tagName === "META" &&
+              element.getAttribute("name") === "description"
+            ) {
+              element.setAttribute("content", dictionary[key]);
+              // Otros elementos de texto (usa innerHTML para mantener negritas)
+            } else {
+              // Guardamos la referencia del SVG si existe
+              const svgElement = element.querySelector(".header-icon");
+              // Actualiza el texto translatable (manteniendo negritas)
+              element.innerHTML = dictionary[key].replace(
+                /\*\*(.*?)\*\*/g,
+                "<strong>$1</strong>"
+              );
+              // Vuelve a insertar el SVG al inicio si existe
+              if (svgElement) {
+                element.prepend(svgElement);
+              }
+            }
+          }
+        });
+
+        // 2.2. Actualizar el enlace de WhatsApp con el mensaje traducido
+        const encodedMessage = encodeURIComponent(dictionary.whatsappMsg);
+        document.getElementById(
+          "whatsappLink"
+        ).href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+        // 2.3. Guardar la preferencia de idioma en localStorage y actualizar lang
+        localStorage.setItem("selectedLanguage", lang);
+        document.documentElement.lang = lang;
+      }
+
+      // 3. INICIALIZACIÓN: Cargar idioma guardado o por defecto (DE)
+      window.onload = function () {
+        // Cargar 'de' por defecto, si no hay preferencia guardada.
+        const savedLang = localStorage.getItem("selectedLanguage") || "de";
+
+        const selectElement = document.getElementById("language-select");
+
+        // Asegurarse de que el valor seleccionado en el dropdown es el idioma cargado.
+        if (selectElement) {
+          selectElement.value = savedLang;
+        }
+
+        setLanguage(savedLang);
+      };
+    </script>
   </body>
 </html>

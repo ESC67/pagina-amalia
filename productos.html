@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Comprar 4Life | Tu Asesoría Activa y Guía de Compra Segura</title>
-
+    <title data-translate-key="pageTitle">
+      4Life Kaufen | Ihre Aktive Beratung und Sichere Kaufanleitung
+    </title>
     <meta
       name="description"
-      content="Accede a la tienda oficial de 4Life para realizar tu compra con seguridad. Tu pedido activa inmediatamente tu asesoría personalizada de uso y dosificación."
+      content="Greifen Sie auf den offiziellen 4Life-Shop zu, um Ihren Einkauf sicher zu tätigen. Ihre Bestellung aktiviert sofort unseren persönlichen Beratungsdienst für Anwendung und Dosierung."
+      data-translate-key="metaDescription"
     />
 
     <link rel="stylesheet" href="style.css" />
@@ -19,48 +21,102 @@
   </head>
   <body>
     <a
-      href="https://wa.me/TUNUMERO?text=Hola,%20solicito%20asesoría%20sobre%20productos%204Life."
+      href="https://wa.me/TUNUMERO"
       target="_blank"
       class="whatsapp-float"
+      id="whatsappLink"
     >
       <i class="fab fa-whatsapp"></i>
     </a>
 
     <header class="secondary-header">
       <div class="container">
-        <h1>[Tu Nombre/Marca] Tienda Oficial 4Life</h1>
-        <nav>
-          <a href="index.html">Inicio</a>
-          <a href="index.html#contacto">Contacto</a>
-        </nav>
+        <h1 data-translate-key="siteTitle">
+          <svg
+            width="100"
+            height="100"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            class="header-icon"
+          >
+            <defs>
+              <style>
+                .violeta {
+                  fill: #3a2a4e;
+                }
+                .dorado {
+                  fill: #c7a252;
+                }
+                .dorado-stroke {
+                  stroke: #c7a252;
+                }
+              </style>
+            </defs>
+            <circle cx="50" cy="50" r="50" class="violeta" />
+            <g transform="translate(50, 50)">
+              <path
+                d="M -30 0 C -20 -30, 20 -30, 30 0 C 20 30, -20 30, -30 0"
+                class="dorado-stroke"
+                stroke-width="7"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="0" cy="0" r="12" class="dorado" />
+              <circle cx="0" cy="0" r="6" class="violeta" />
+            </g>
+          </svg>
+          [Ihr Name/Marke] Offizieller 4Life Shop
+        </h1>
+
+        <div class="nav-group">
+          <nav>
+            <a href="index.html" data-translate-key="navHome">Start</a>
+            <a href="productos.html" data-translate-key="navProducts"
+              >Produkte</a
+            >
+          </nav>
+
+          <div class="language-selector">
+            <label for="language-select" data-translate-key="langLabel"
+              >Sprache:</label
+            >
+            <select id="language-select" onchange="setLanguage(this.value)">
+              <option value="de">Deutsch</option>
+              <option value="es">Español</option>
+              <option value="en">English</option>
+              <option value="pt">Português</option>
+            </select>
+          </div>
+        </div>
       </div>
     </header>
 
     <section class="transition-container">
       <div class="container">
-        <h2 class="main-title">
-          Tu Compra 4Life: Simple y con Respaldo Experto
+        <h2 class="main-title" data-translate-key="h2Title">
+          Ihr 4Life Einkauf: Einfach, Sicher und mit Wertvoller Beratung
         </h2>
 
         <div class="value-block">
-          <p>
-            ¡Estás a un paso de comenzar tu camino hacia el bienestar! Hemos
-            simplificado el proceso para ti:
+          <p data-translate-key="blockP">
+            Herzlichen Glückwunsch! Sie sind nur einen Schritt vom Kauf Ihrer
+            Produkte entfernt. Wenn Sie über den folgenden Link einkaufen,
+            erhalten Sie:
           </p>
           <ul>
-            <li>
-              <i class="fas fa-check-circle"></i> **Compra Segura:** Serás
-              redirigido a la tienda oficial de 4Life.
+            <li data-translate-key="li1">
+              <i class="fas fa-check-circle"></i> **Sicherer Einkauf:** Sie
+              werden zum offiziellen 4Life-Shop weitergeleitet.
             </li>
-            <li>
-              <i class="fas fa-check-circle"></i> **Asesoría Garantizada:** Tu
-              compra activa automáticamente nuestro servicio de guía de uso y
-              dosificación.
+            <li data-translate-key="li2">
+              <i class="fas fa-check-circle"></i> **VIP-Beratung:** Ihre
+              Bestellung aktiviert sofort unseren persönlichen Beratungsdienst
+              für Anwendung und Dosierung.
             </li>
-            <li>
-              <i class="fas fa-check-circle"></i> **¿Dudas?** Nuestro chat de
-              WhatsApp (esquina) sigue activo para cualquier consulta antes de
-              comprar.
+            <li data-translate-key="li3">
+              <i class="fas fa-check-circle"></i> **Direkter Support:**
+              Priorisierter Zugang für Anfragen nach dem Kauf.
             </li>
           </ul>
         </div>
@@ -69,26 +125,184 @@
           href="https://germany.4life.com/corp/shop/all"
           target="_blank"
           class="cta-button primary large-cta"
+          data-translate-key="ctaText"
         >
-          <i class="fas fa-shopping-cart"></i> Ir a la Tienda Oficial 4Life y
-          Comprar
+          <i class="fas fa-shopping-cart"></i> Weiter zum Offiziellen 4Life Shop
         </a>
 
-        <p class="disclaimer-text">
-          Nota: Al hacer clic, saldrás de nuestra página para completar la
-          transacción en el sitio oficial de 4Life. Abre en una nueva pestaña
-          para que no nos pierdas de vista.
+        <p class="disclaimer-text" data-translate-key="disclaimer">
+          Hinweis: Der Link öffnet den offiziellen Shop in einem neuen Tab. Wenn
+          Sie Fragen haben, schreiben Sie uns vor dem Kauf über unseren
+          schwebenden WhatsApp-Button.
         </p>
       </div>
     </section>
 
     <footer>
       <div class="container">
-        <p>
-          &copy; 2024 [Tu Nombre/Marca]. Asesoría independiente de productos
-          4Life.
+        <p data-translate-key="footerText">
+          &copy; 2024 [Ihr Name/Marke]. Unabhängige Beratung zu 4Life-Produkten.
         </p>
       </div>
     </footer>
+
+    <script>
+      // 1. OBJETO DE TRADUCCIONES PARA DE, ES, EN, PT
+      const translations = {
+        de: {
+          pageTitle:
+            "4Life Kaufen | Ihre Aktive Beratung und Sichere Kaufanleitung",
+          metaDescription:
+            "Greifen Sie auf den offiziellen 4Life-Shop zu, um Ihren Einkauf sicher zu tätigen. Ihre Bestellung aktiviert sofort unseren persönlichen Beratungsdienst für Anwendung und Dosierung.",
+          siteTitle: "[Ihr Name/Marke] Offizieller 4Life Shop",
+          navHome: "Start",
+          navProducts: "Produkte",
+          langLabel: "Sprache:",
+          h2Title:
+            "Ihr 4Life Einkauf: Einfach, Sicher und mit Wertvoller Beratung",
+          blockP:
+            "Herzlichen Glückwunsch! Sie sind nur einen Schritt vom Kauf Ihrer Produkte entfernt. Wenn Sie über den folgenden Link einkaufen, erhalten Sie:",
+          li1: "**Sicherer Einkauf:** Sie werden zum offiziellen 4Life-Shop weitergeleitet.",
+          li2: "**VIP-Beratung:** Ihre Bestellung aktiviert sofort unseren persönlichen Beratungsdienst für Anwendung und Dosierung.",
+          li3: "**Direkter Support:** Priorisierter Zugang für Anfragen nach dem Kauf.",
+          ctaText: "Weiter zum Offiziellen 4Life Shop",
+          disclaimer:
+            "Hinweis: Der Link öffnet den offiziellen Shop in einem neuen Tab. Wenn Sie Fragen haben, schreiben Sie uns vor dem Kauf über unseren schwebenden WhatsApp-Button.",
+          footerText:
+            "&copy; 2024 [Ihr Name/Marke]. Unabhängige Beratung zu 4Life-Produkten.",
+          whatsappMsg: "Hallo, ich bitte um Beratung zu 4Life-Produkten.",
+        },
+        es: {
+          pageTitle:
+            "Comprar 4Life | Tu Asesoría Activa y Guía de Compra Segura",
+          metaDescription:
+            "Accede a la tienda oficial de 4Life para realizar tu compra con seguridad. Tu pedido activa inmediatamente tu asesoría personalizada de uso y dosificación.",
+          siteTitle: "[Tu Nombre/Marca] Tienda Oficial 4Life",
+          navHome: "Inicio",
+          navProducts: "Productos",
+          langLabel: "Idioma:",
+          h2Title: "Tu Compra 4Life: Simple, Segura y con Asesoría de Valor",
+          blockP:
+            "¡Felicidades! Estás a un paso de adquirir tus productos. Al realizar tu compra a través del enlace de abajo, obtienes:",
+          li1: "**Compra Segura:** Serás redirigido a la tienda oficial de 4Life.",
+          li2: "**Asesoría VIP:** Tu pedido activa inmediatamente nuestro servicio de guía de uso y dosificación personalizada.",
+          li3: "**Soporte Directo:** Acceso prioritario para consultas post-compra.",
+          ctaText: "Continuar a la Tienda Oficial 4Life",
+          disclaimer:
+            "Nota: El enlace abre la tienda oficial en una nueva pestaña. Si tienes dudas, escríbenos a nuestro WhatsApp flotante antes de comprar.",
+          footerText:
+            "&copy; 2024 [Tu Nombre/Marca]. Asesoría independiente de productos 4Life.",
+          whatsappMsg: "Hola, solicito consultoría sobre productos 4Life.",
+        },
+        en: {
+          pageTitle: "Buy 4Life | Active Consulting and Secure Purchase Guide",
+          metaDescription:
+            "Access the official 4Life store to make your purchase securely. Your order immediately activates your personalized usage and dosage consulting service.",
+          siteTitle: "[Your Name/Brand] Official 4Life Store",
+          navHome: "Home",
+          navProducts: "Products",
+          langLabel: "Language:",
+          h2Title:
+            "Your 4Life Purchase: Simple, Secure, and with Valuable Consulting",
+          blockP:
+            "Congratulations! You are one step away from purchasing your products. By making your purchase through the link below, you get:",
+          li1: "**Secure Purchase:** You will be redirected to the official 4Life store.",
+          li2: "**VIP Consulting:** Your order immediately activates our personalized usage and dosage guide service.",
+          li3: "**Direct Support:** Priority access for post-purchase inquiries.",
+          ctaText: "Continue to the Official 4Life Store",
+          disclaimer:
+            "Note: The link opens the official store in a new tab. If you have questions, message us on our floating WhatsApp before purchasing.",
+          footerText:
+            "&copy; 2024 [Your Name/Brand]. Independent 4Life product consulting.",
+          whatsappMsg: "Hello, I request consulting regarding 4Life products.",
+        },
+        pt: {
+          pageTitle:
+            "Comprar 4Life | Consultoria Ativa e Guia de Compra Segura",
+          metaDescription:
+            "Acesse a loja oficial da 4Life para fazer sua compra com segurança. Seu pedido ativa imediatamente seu serviço de consultoria personalizada de uso e dosagem.",
+          siteTitle: "[Seu Nome/Marca] Loja Oficial 4Life",
+          navHome: "Início",
+          navProducts: "Produtos",
+          langLabel: "Idioma:",
+          h2Title:
+            "Sua Compra 4Life: Simples, Segura e com Consultoria de Valor",
+          blockP:
+            "Parabéns! Você está a um passo de adquirir seus produtos. Ao fazer sua compra através do link abaixo, você obtém:",
+          li1: "**Compra Segura:** Você será redirecionado para a loja oficial da 4Life.",
+          li2: "**Consultoria VIP:** Seu pedido ativa imediatamente nosso serviço de guia de uso e dosagem personalizada.",
+          li3: "**Suporte Direto:** Acesso prioritário para consultas pós-compra.",
+          ctaText: "Continuar para a Loja Oficial 4Life",
+          disclaimer:
+            "Nota: O link abre a loja oficial em uma nova aba. Se tiver dúvidas, envie-nos uma mensagem no nosso botão flutuante do WhatsApp antes de comprar.",
+          footerText:
+            "&copy; 2024 [Seu Nome/Marca]. Consultoria independente de produtos 4Life.",
+          whatsappMsg: "Olá, solicito consultoria sobre produtos 4Life.",
+        },
+      };
+
+      // Número de WhatsApp (debe incluir código de país, sin '+' ni espacios)
+      const WHATSAPP_NUMBER = "TUNUMERO";
+
+      // 2. FUNCIÓN PARA APLICAR EL IDIOMA
+      function setLanguage(lang) {
+        const dictionary = translations[lang];
+
+        // 2.1. Traducir elementos con data-translate-key
+        document.querySelectorAll("[data-translate-key]").forEach((element) => {
+          const key = element.getAttribute("data-translate-key");
+          if (dictionary[key]) {
+            // Título de la página
+            if (element.tagName === "TITLE") {
+              element.textContent = dictionary[key];
+              // Meta descripción
+            } else if (
+              element.tagName === "META" &&
+              element.getAttribute("name") === "description"
+            ) {
+              element.setAttribute("content", dictionary[key]);
+              // Otros elementos de texto (usa innerHTML para mantener negritas)
+            } else {
+              // Guardamos la referencia del SVG si existe
+              const svgElement = element.querySelector(".header-icon");
+              // Actualiza el texto translatable (manteniendo negritas)
+              element.innerHTML = dictionary[key].replace(
+                /\*\*(.*?)\*\*/g,
+                "<strong>$1</strong>"
+              );
+              // Vuelve a insertar el SVG al inicio si existe
+              if (svgElement) {
+                element.prepend(svgElement);
+              }
+            }
+          }
+        });
+
+        // 2.2. Actualizar el enlace de WhatsApp con el mensaje traducido
+        const encodedMessage = encodeURIComponent(dictionary.whatsappMsg);
+        document.getElementById(
+          "whatsappLink"
+        ).href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+        // 2.3. Guardar la preferencia de idioma en localStorage y actualizar lang
+        localStorage.setItem("selectedLanguage", lang);
+        document.documentElement.lang = lang;
+      }
+
+      // 3. INICIALIZACIÓN: Cargar idioma guardado o por defecto (DE)
+      window.onload = function () {
+        // Cargar 'de' por defecto, si no hay preferencia guardada.
+        const savedLang = localStorage.getItem("selectedLanguage") || "de";
+
+        const selectElement = document.getElementById("language-select");
+
+        // Asegurarse de que el valor seleccionado en el dropdown es el idioma cargado.
+        if (selectElement) {
+          selectElement.value = savedLang;
+        }
+
+        setLanguage(savedLang);
+      };
+    </script>
   </body>
 </html>
